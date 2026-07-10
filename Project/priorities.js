@@ -4,13 +4,15 @@ const Projects = ['JalenOS', 'Portfolio', 'AWS'];
 const Investments = ['Review Roth', 'Review Earnings', 'Macro News', 'Review Individual Acc'];
 
 function display(priorities) {
-    // for (let i = 0; i<priorities.length; i++) {    
-    // }
-    console.log(priorities.forEach(priorities =>console.log(color)));
+    for(i = 0 ; i < priorities.length; i ++){
+        console.log(priorities.forEach(priorities =>console.log(priorities)));
+    }
+    
 }
 
-console.log('Hello, {name}');
-console.log(display(career));
+console.log(display([career,Learning,Projects,Investments]));
+
+// Objects 
 // Modules
 // File system
 // HTTP Server 
