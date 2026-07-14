@@ -1,100 +1,33 @@
-// Career Priorities 
-const pc1 = { 'Title':'Company Research',
-                    'Level of Importance':'High',
-                    'Category':'Career',
-                    'Action':'Apply to XXXX, and research XXX until you find 10 jobs then reach out to 3 people within company.',
-                    'Latest Status': 'Connected with XXXX and XXX, but also have not applied to any of the 4 positions.',
-                    'Quick Link': '.....'
+// Just make a priorities constructor 
+function Priority(title, category, action, latest_Status, level_Of_Importance, quick_Link){
+    this.title = title;
+    this.category = category;
+    this.action = action; 
+    this.status = latest_Status;
+    this.importance = level_Of_Importance;
+    this.link = quick_Link;
+
 }
 
-const pc2 = { 'Title':'Stay Connected!',
-            'Level of Importance':'Medium',
-            'Category':'Career',
-            'Action':'Reach out to since it has been XXXX Days since last contact',
-            'Latest Status':'Recently Spoke to XXXX Need to speak to XXXX',
-            'Quick Link':'.....'
-}
+// Career Priorities 
+const pc1 = new Priority('Comany Research', 'Career','Apply to XXX', 'Connected with XXX', 'High', 'Quick Link');
+                    
+const pc2 = new Priority('Stay Connected', 'Career','Reach out to XXX', 'Recently spoke with XXX', 'Medium', 'Quick Link');         
 
 //Learning 
-const pl1 = { 'Title':'Stay Connected!',
-            'Level of Importance':'Medium',
-            'Category':'Career',
-            'Action':'Reach out to since it has been XXXX Days since last contact',
-            'Latest Status':'Recently Spoke to XXXX Need to speak to XXXX',
-            'Quick Link':'.....'
-}
+const pl1 = new Priority('New Book', 'Learning','Go through XXX', 'Currently Reading XXX', 'Low', 'Quick Link');
 
-const pl2 = { 'Title':'Stay Connected!',
-            'Level of Importance':'Medium',
-            'Category':'Career',
-            'Action':'Reach out to since it has been XXXX Days since last contact',
-            'Latest Status':'Recently Spoke to XXXX Need to speak to XXXX',
-            'Quick Link':'.....'
-}
+const pl2 = new Priority('Learn Node','Learning','Start the lectures on Async','Implemented Objects into JalenOS','High','Quick_Link');
 
-const pl3 = { 'Title':'Stay Connected!',
-            'Level of Importance':'Medium',
-            'Category':'Career',
-            'Action':'Reach out to since it has been XXXX Days since last contact',
-            'Latest Status':'Recently Spoke to XXXX Need to speak to XXXX',
-            'Quick Link':'.....'
-}
+// Project 
+const pp1 = new Priority('JalenOS','Projects','Continue to build out project','Added Objects','High', 'Quick_Link');
 
-const pl4 = { 'Title':'Stay Connected!',
-            'Level of Importance':'Medium',
-            'Category':'Career',
-            'Action':'Reach out to since it has been XXXX Days since last contact',
-            'Latest Status':'Recently Spoke to XXXX Need to speak to XXXX',
-            'Quick Link':'.....'
-}
-// Project Priorities 
-const pp1 = { 'Title':'Stay Connected!',
-            'Level of Importance':'Medium',
-            'Category':'Career',
-            'Action':'Reach out to since it has been XXXX Days since last contact',
-            'Latest Status':'Recently Spoke to XXXX Need to speak to XXXX',
-            'Quick Link':'.....'
-}
-const pp2 = { 'Title':'Stay Connected!',
-            'Level of Importance':'Medium',
-            'Category':'Career',
-            'Action':'Reach out to since it has been XXXX Days since last contact',
-            'Latest Status':'Recently Spoke to XXXX Need to speak to XXXX',
-            'Quick Link':'.....'
-}
-const pp3 = { 'Title':'Stay Connected!',
-            'Level of Importance':'Medium',
-            'Category':'Career',
-            'Action':'Reach out to since it has been XXXX Days since last contact',
-            'Latest Status':'Recently Spoke to XXXX Need to speak to XXXX',
-            'Quick Link':'.....'
-}
-// Investment Priorities 
-const pi1 = { 'Title':'Stay Connected!',
-            'Level of Importance':'Medium',
-            'Category':'Career',
-            'Action':'Reach out to since it has been XXXX Days since last contact',
-            'Latest Status':'Recently Spoke to XXXX Need to speak to XXXX',
-            'Quick Link':'.....'
-}
-const pi2 = { 'Title':'Stay Connected!',
-            'Level of Importance':'Medium',
-            'Category':'Career',
-            'Action':'Reach out to since it has been XXXX Days since last contact',
-            'Latest Status':'Recently Spoke to XXXX Need to speak to XXXX',
-            'Quick Link':'.....'
-}
-const pi3 = { 'Title':'Stay Connected!',
-            'Level of Importance':'Medium',
-            'Category':'Career',
-            'Action':'Reach out to since it has been XXXX Days since last contact',
-            'Latest Status':'Recently Spoke to XXXX Need to speak to XXXX',
-            'Quick Link':'.....'
-}
-const pi4 = { 'Title':'Stay Connected!',
-            'Level of Importance':'Medium',
-            'Category':'Career',
-            'Action':'Reach out to since it has been XXXX Days since last contact',
-            'Latest Status':'Recently Spoke to XXXX Need to speak to XXXX',
-            'Quick Link':'.....'
-}
+
+const pp2 = new Priority('Research Engine','Projects','Create the Repo','Have only ideated','High','Quick_Link');
+
+
+const career_priorities = [pc1,pc2];
+const learning_priorities = [pl1,pl2];
+const project_priorities = [pp1,pp2];
+
+export {career_priorities, learning_priorities, project_priorities};

@@ -7,3 +7,4 @@ Each Priority needs:
  - Latest Status 
  - Quick Link to Anything that will help accomplish priority
 
+Created a Priority contructor to reduce duplication in logic. This will make adding future priorities easy. 
