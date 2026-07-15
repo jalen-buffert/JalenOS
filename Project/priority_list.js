@@ -1,13 +1,15 @@
-// Just make a priorities constructor 
-function Priority(title, category, action, latest_Status, level_Of_Importance, quick_Link){
+// Well no, a class
+class Priority{
+    constructor(title, category, action, latest_Status, level_Of_Importance, quick_Link) {
     this.title = title;
     this.category = category;
     this.action = action; 
     this.status = latest_Status;
     this.importance = level_Of_Importance;
     this.link = quick_Link;
-
+    }
 }
+
 
 // Career Priorities 
 const pc1 = new Priority('Comany Research', 'Career','Apply to XXX', 'Connected with XXX', 'High', 'Quick Link');

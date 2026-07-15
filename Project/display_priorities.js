@@ -4,6 +4,7 @@ function convert_to_JSON(priorities) {
     return JSON.stringify(priorities)
 }
 
+
 function display(priorities) {
     
     //for(i = 0 ; i < priorities.length; i ++){
@@ -13,8 +14,8 @@ function display(priorities) {
     
 }
 const json_s = convert_to_JSON(career_priorities);
-console.log(json_s)
-
+// console.log(json_s)
+console.log(career_priorities[1])
 export {json_s};
 
 //console.log(display([career_priorities, learning_priorities, project_priorities]));
