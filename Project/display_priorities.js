@@ -15,7 +15,7 @@ function display(priorities) {
 }
 const json_s = convert_to_JSON(career_priorities);
 // console.log(json_s)
-console.log(career_priorities[1])
+console.log(career_priorities)
 export {json_s};
 
 //console.log(display([career_priorities, learning_priorities, project_priorities]));

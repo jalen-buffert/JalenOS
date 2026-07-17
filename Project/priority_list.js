@@ -12,7 +12,7 @@ class Priority{
 
 
 // Career Priorities 
-const pc1 = new Priority('Comany Research', 'Career','Apply to XXX', 'Connected with XXX', 'High', 'Quick Link');
+const pc1 = new Priority('Company Research', 'Career','Apply to XXX', 'Connected with XXX', 'High', 'Quick Link');
                     
 const pc2 = new Priority('Stay Connected', 'Career','Reach out to XXX', 'Recently spoke with XXX', 'Medium', 'Quick Link');         
 
