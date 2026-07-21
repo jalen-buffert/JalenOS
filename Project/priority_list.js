@@ -32,4 +32,12 @@ const career_priorities = [pc1,pc2];
 const learning_priorities = [pl1,pl2];
 const project_priorities = [pp1,pp2];
 
-export {career_priorities, learning_priorities, project_priorities};
+function convert_to_JSON(priorities) {
+    return JSON.stringify(priorities)
+}
+
+const data = convert_to_JSON([career_priorities,learning_priorities,project_priorities]);
+
+console.log(data);
+
+export {data};
