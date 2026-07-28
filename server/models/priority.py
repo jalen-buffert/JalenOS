@@ -1,7 +1,7 @@
-from fastapi import FastAPI
 from pydantic import BaseModel
 
 class Priority(BaseModel):
+    priority_id: int
     title: str
     category: str 
     action: str

@@ -36,10 +36,10 @@ export class App {
   load() {
     this.loading = true;
     this.error = '';
-    this.http.get<any[]>('http://localhost:8000')
+    this.http.get<any[]>('http://127.0.0.1:8000/priorities/')
       .subscribe({
         next:(data) => {this.priorities = data; this.loading = false; },
-        error: () => { this.error = 'Failed to load correct data'; this.loading = false; }
+        error: (err) => { console.log(err); this.error = 'Failed to load correct data'; this.loading = false; }
       });
   }
 
