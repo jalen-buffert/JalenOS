@@ -14,3 +14,10 @@ class PriorityCreate(BaseModel):
     category: str
     status: str | None = None
     importance: str
+    
+class PriorityUpdate(BaseModel):
+    title: str | None = None
+    action: str | None = None
+    status: str | None = None
+    importance: str | None = None 
+    link: str | None = None
