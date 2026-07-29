@@ -78,6 +78,3 @@ real_priorities = [
         link = 'NA'
         )
 ]
-
-for priority in real_priorities:
-    print(priority.priority_id)
