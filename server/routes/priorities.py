@@ -1,6 +1,7 @@
 from fastapi import APIRouter, HTTPException 
 from server.data import real_priorities
 from server.models.priority import Priority,PriorityCreate,PriorityUpdate
+#from fastapi.encoders import jsonable_encoder
 import uuid
 
 router = APIRouter(prefix ="/priorities", tags =['priorities'])
@@ -15,9 +16,9 @@ async def read_priorities():
 
 # Read - GET a specific prioriy by ID
 @router.get('/{priority_id}', response_model=Priority)
-async def read_singular_priority(priority_id: str | int):
+async def read_singular_priority(priority_id: str):
     for priority in real_priorities:
-        if priority_id == str(priority.priority_id):
+        if priority_id == priority.priority_id:
             return priority
     raise HTTPException(status_code=404, detail = 'ID not found')
 
@@ -31,21 +32,26 @@ async def create_new_priority(priority: PriorityCreate):
 
 #Research exclude_unset()
 # Update - PUT to update a priority 
-@router.put('/{priority_id}', response_model=Priority, status_code=200)
+@router.patch('/{priority_id}', response_model=Priority, status_code=200)
 async def update_priority(priority_id: str, priority:PriorityUpdate):
     for i, r_priority in enumerate(real_priorities):
-        if priority_id == str(r_priority.priority_id):
-            real_priorities[i] = priority
-            return priority
+        if priority_id == r_priority.priority_id:
+            updated_data = priority.model_dump(exclude_unset=True)
+            updated_priority = r_priority.model_copy(update=updated_data)
+            real_priorities[i] = updated_priority
+            return updated_priority
     raise HTTPException(status_code=404, detail = 'Priority ID not found')
     
 # Delete - Delete a priority
 @router.delete('/{priority_id}', status_code=204)
-async def delete_priority(priority_id: str): 
+async def delete_priority(priority_id: str):
+    l1 = len(real_priorities)
     for i, r_priority in enumerate(real_priorities):
-        if priority_id == str(r_priority.priority_id):
-            delete_p = real_priorities.pop(i)
-    raise HTTPException(status_code=404, detail = 'Priority ID not found')
+        if priority_id == r_priority.priority_id:
+            real_priorities.pop(i)
+            l2 = len(real_priorities)       
+    if l1 == l2:
+        raise HTTPException(status_code=404, detail = 'Priority ID not found')
 
 
 # Patch a specific one 

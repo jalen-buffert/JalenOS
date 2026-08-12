@@ -1,8 +1,8 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 class Priority(BaseModel):
-    priority_id: str | int
-    title: str
+    priority_id: str 
+    title: str = Field(default = None, title= "Very brief description of priority", max_length=50)
     category: str 
     action: str
     status: str
