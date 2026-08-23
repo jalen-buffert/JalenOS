@@ -30,7 +30,6 @@ async def create_new_priority(priority: PriorityCreate):
     real_priorities.append(new_priority)
     return new_priority
 
-#Research exclude_unset()
 # Update - PUT to update a priority 
 @router.patch('/{priority_id}', response_model=Priority, status_code=200)
 async def update_priority(priority_id: str, priority:PriorityUpdate):
@@ -40,7 +39,7 @@ async def update_priority(priority_id: str, priority:PriorityUpdate):
             updated_priority = r_priority.model_copy(update=updated_data)
             real_priorities[i] = updated_priority
             return updated_priority
-    raise HTTPException(status_code=404, detail = 'Priority ID not found')
+    raise HTTPException(status_code=404, detail = 'Priority not found')
     
 # Delete - Delete a priority
 @router.delete('/{priority_id}', status_code=204)
@@ -49,9 +48,9 @@ async def delete_priority(priority_id: str):
     for i, r_priority in enumerate(real_priorities):
         if priority_id == r_priority.priority_id:
             real_priorities.pop(i)
-            l2 = len(real_priorities)       
+    l2 = len(real_priorities)       
     if l1 == l2:
-        raise HTTPException(status_code=404, detail = 'Priority ID not found')
+        raise HTTPException(status_code=404, detail = 'Priority not found')
 
 
 # Patch a specific one 

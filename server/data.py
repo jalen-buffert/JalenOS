@@ -9,7 +9,7 @@ real_priorities = [
         action = 'Reach out to XXX, and edit version XXX',
         status = 'Last spoke to XXX and did XXX',
         importance = 'High',
-        link = 'NA'
+        Link = None
         ),
     Priority(
         priority_id = 'a8b661f9-b4b6-42e8-9271-954b42a9e820',
@@ -18,7 +18,7 @@ real_priorities = [
         action = 'Research XXX companies',
         status = 'Last spoke to XXX',
         importance = 'High',
-        link = 'NA'
+        link = None
         ),
     
     Priority(
@@ -28,7 +28,7 @@ real_priorities = [
         action = 'SEt 30 minutes out of the day to read',
         status = 'Currently on Page XXX',
         importance = 'High',
-        link = 'NA'
+        link = None
         ),
     Priority(
         priority_id = 'ae41b068-4d45-45e7-99a6-355cfd0f7633',
@@ -37,44 +37,44 @@ real_priorities = [
         action = 'Continue Udemy course',
         status = 'Last learned about XXX',
         importance = 'High',
-        link = 'NA'
+        link = None
         ),
     
     Priority(
         priority_id = '425bb88d-267e-4080-8c41-44f47f45e525',
         title = 'JalenOS', 
-        category = 'Projects',
+        category = 'Project',
         action = 'Continue building project out',
         status = 'Last worked on changing data into pydantic classes',
         importance = 'High',
-        link = 'NA'
+        link = None
         ),
     Priority(
         priority_id = 'c9e2ac15-a155-4d4b-9422-46b059e0d700',
         title = 'Revamp Efficient Frontier', 
-        category = 'Projects',
+        category = 'Project',
         action = 'See any pitfalls and commentary from Devs',
         status = 'Last Published on web and didn\'t touch',
         importance = 'Medium',
-        link = 'NA'
+        link = None
         ),
     
     Priority(
         priority_id = 'f7169ff5-27c6-411a-b240-eb76e7fec7c9',
         title = 'Rebalance Portfolio', 
-        category = 'Investments',
+        category = 'Investment',
         action = 'Research XXX companies for insights into next investment',
         status = 'Last looked into XXX',
         importance = 'Medium',
-        link = 'NA'
+        link = None
         ),
     Priority(
         priority_id = 'e2b77d4a-376c-493f-928a-b84344185730',
         title = 'Build Models for forecasting', 
-        category = 'Investments',
+        category = 'Investment',
         action = 'Look into previous models built',
         status = 'Last worked on were Black litterman, Mean-Variance',
         importance = 'Low',
-        link = 'NA'
+        link = None
         )
 ]
