@@ -19,14 +19,14 @@ class Priority(BaseModel):
     title: str = Field(max_length=50)
     category: Category
     action: str 
-    status: str = Field(max_length=200)
+    status: Union[str, None] = Field(default="Not Started", max_length=200)
     importance: Importance
     link: Union[AnyUrl, None] = Field(default=None)
     
 class PriorityCreate(BaseModel):
     title: str = Field(max_length=50)
     category: Category
-    status:  str | None = Field(default=None,max_length=200)
+    status:  str | None = Field(default=None, max_length=200)
     importance: Importance
     
 class PriorityUpdate(BaseModel):
