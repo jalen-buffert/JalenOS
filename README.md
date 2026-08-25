@@ -23,3 +23,6 @@ There are plenty of personal assistant apps, but nothing that is personalized to
 We only get one life. I want to enjoy mine. I think this will reduce the friction between learning, planning, executing, and building. 
 
 Node.js
+
+### Local Development/ Configuration 
+JalenOS uses environment vars for configuration. 

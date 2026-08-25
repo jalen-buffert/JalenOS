@@ -141,3 +141,15 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+
+#Jalen OS
+
+#Python Virtual Environments 
+.venv/
+.venv-1/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+
