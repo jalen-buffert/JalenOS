@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException 
 from server.data import real_priorities
-from server.models.priority import Priority,PriorityCreate,PriorityUpdate
+from server.schemas.priority import Priority,PriorityCreate,PriorityUpdate
 #from fastapi.encoders import jsonable_encoder
 import uuid
 

@@ -1,4 +1,4 @@
-from server.models.priority import Priority
+from server.schemas.priority import Priority
 
 real_priorities = [
     #Career, Education, Projects, Investments
