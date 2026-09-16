@@ -1,6 +1,6 @@
 -- Priorities Table 
 
-CREATE TABLE category(
+CREATE TABLE categories(
     {
         category_id INT PRIMARY KEY,
         category VARCHAR(50)
@@ -42,8 +42,8 @@ CREATE TABLE priorities(
         title VARCHAR(50),
         action_needed VARCHAR(250),
         link VARCHAR,
-        c_id INT references category(category_id),
-        i_id INT references importance(importance_id),
-        s_id INT references status(status_id),
+        category_id INT references category(category_id),
+        importance_id INT references importance(importance_id),
+        status_id INT references status(status_id),
     }
 );

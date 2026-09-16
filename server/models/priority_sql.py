@@ -9,9 +9,9 @@ class Base(DeclarativeBase):
     pass
 
 class Category(Base):
-    __tablename__ = "categories"
+    __tablename__ = "category"
     
-    catregory_id:Mapped[int] = mapped_column(primary_key=True)
+    category_id:Mapped[int] = mapped_column(primary_key=True)
     category: Mapped[str] = mapped_column(String(50))
     
     def __repr__(self) -> str:
@@ -34,7 +34,7 @@ class Status(Base):
     status: Mapped[str] = mapped_column(String(50))
     
 class Priority(Base):
-    __tablename__ = "priorities"
+    __tablename__ = "priority"
     
     priority_id: Mapped[int] = mapped_column(primary_key=True)
     title: Mapped[str] = mapped_column(String(50))
@@ -44,7 +44,7 @@ class Priority(Base):
     importance_id: Mapped[int]
     status_id: Mapped[int]
     ForeignKeyConstraint(["category_id", "importance_id", "status_id"],
-                         ["categories.category_id","importance.importance_id", "status.status_id"]
+                         ["category.category_id","importance.importance_id", "s`tatus.status_id"]
     )
         
     def __repr__(self) -> str: 

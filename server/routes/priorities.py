@@ -20,7 +20,7 @@ async def read_singular_priority(priority_id: str):
     for priority in real_priorities:
         if priority_id == priority.priority_id:
             return priority
-    raise HTTPException(status_code=404, detail = 'ID not found')
+    raise HTTPException(status_code=404, detail = 'ID not found')           
 
 # Create - POST a new one
 @router.post('/', response_model=Priority, status_code=201)
